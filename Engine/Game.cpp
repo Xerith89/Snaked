@@ -25,7 +25,7 @@ Game::Game( MainWindow& wnd )
 	:
 	wnd( wnd ),
 	gfx( wnd ),
-	xDist(1, 28),
+	xDist(1, 38),
 	yDist(1, 28),
 	brd(gfx)
 {
