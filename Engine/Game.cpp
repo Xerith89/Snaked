@@ -94,6 +94,7 @@ void Game::SpawnFruit()
 		snake.bloct[snake.nSegments].x = snake.bloct[snake.nSegments - 1].x;
 		snake.bloct[snake.nSegments].y = snake.bloct[snake.nSegments - 1].y;
 		floc = { xDist(rng),yDist(rng) };
+		snake.SpeedUp();
 	}
 }
 

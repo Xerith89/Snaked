@@ -134,3 +134,15 @@ bool Snake::insideTile()
 	return insidetile;
 }
 
+void Snake::SpeedUp()
+{
+	if (resetTime > MaxSpeed)
+	{
+		resetTime = resetTime - speedUpTimer;
+	}
+	else if (resetTime <= MaxSpeed)
+	{
+		resetTime = MaxSpeed;
+	}
+}
+

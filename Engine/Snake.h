@@ -16,6 +16,8 @@ private:
 	bool dirDown = false;
 	float resetTime = 0.4f;
 	float counter = 0.0f;
+	float speedUpTimer = 0.05f;
+	float MaxSpeed = 0.20f;
 	bool insidetile = false;
 public:
 	Snake();
@@ -29,5 +31,6 @@ public:
 	bool insideTile();
 	Location bloct[50];
 	Location loc = { 5,10 };
+	void SpeedUp();
 };
 
