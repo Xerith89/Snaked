@@ -12,7 +12,3 @@ Board::Board(Graphics & gfx)
 	
 }
 
-int Board::GetDimension()
-{
-	return cellDimension;
-}

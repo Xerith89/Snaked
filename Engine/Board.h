@@ -11,6 +11,5 @@ private:
 public:
 	void DrawCell(Location& loc, Color c); 
 	Board(Graphics &gfx);
-	int GetDimension();
 };
 
