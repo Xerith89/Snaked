@@ -25,8 +25,8 @@ Game::Game( MainWindow& wnd )
 	:
 	wnd( wnd ),
 	gfx( wnd ),
-	xDist(1, 77),
-	yDist(1, 57),
+	xDist(1, 28),
+	yDist(1, 28),
 	brd(gfx)
 {
 	snake.bloct[0] = { snake.loc.x - 1, snake.loc.y };
