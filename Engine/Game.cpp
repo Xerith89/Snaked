@@ -42,6 +42,7 @@ void Game::Go()
 
 void Game::UpdateModel()
 {
+	const float dt = ft.Mark();
 	if (wnd.kbd.KeyIsPressed(VK_RETURN) && !isGameStarted && !isGameOver)
 	{
 		isGameStarted = true;
@@ -54,7 +55,7 @@ void Game::UpdateModel()
 	if (!isGameOver && isGameStarted)
 	{
 		snake.CheckKeyboard(wnd.kbd);
-		snake.UpdateSnake();
+		snake.UpdateSnake(dt);
 		SpawnFruit();
 		if (snake.insideTile() || snake.HitWall())
 		{

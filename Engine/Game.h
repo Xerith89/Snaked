@@ -28,6 +28,7 @@
 #include "SpriteCodex.h"
 #include "Fruit.h"
 #include <random>
+#include "FrameTimer.h"
 
 class Game
 {
@@ -50,6 +51,7 @@ private:
 	Snake snake;
 	SpriteCodex sprite;
 	Fruit fruit;
+	FrameTimer ft;
 	std::random_device rd;
 	std::mt19937 rng;
 	std::uniform_int_distribution<int>xDist;
