@@ -55,7 +55,7 @@ void Game::UpdateModel()
 	if (!isGameOver && isGameStarted)
 	{
 		snake.CheckKeyboard(wnd.kbd);
-		snake.UpdateSnake();
+		snake.UpdateSnake(dt);
 		SpawnFruit();
 		if (snake.insideTile() || snake.HitWall())
 		{

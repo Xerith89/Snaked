@@ -47,9 +47,9 @@ void Snake::CheckKeyboard(Keyboard & kbd)
 	}
 }
 
-void Snake::UpdateSnake()
+void Snake::UpdateSnake(float dt)
 {	
-	counter += 1;
+	counter += dt;
 	if (dirUp && counter >= resetTime)
 	{
 		bloct[0].x = loc.x;
@@ -60,7 +60,7 @@ void Snake::UpdateSnake()
 			bloct[i].y = bloct[i - 1].y;
 		}
 		loc.y -= 1;
-		counter = 0;
+		counter = 0.0f;
 	}
 	else if (dirDown && counter >= resetTime)
 	{
@@ -72,7 +72,7 @@ void Snake::UpdateSnake()
 			bloct[i].y = bloct[i - 1].y;
 		}
 		loc.y += 1;
-		counter = 0;
+		counter = 0.0f;
 	}
 	else if (dirLeft && counter >= resetTime)
 	{
@@ -85,7 +85,7 @@ void Snake::UpdateSnake()
 		}
 
 		loc.x -= 1;
-		counter = 0;
+		counter = 0.0f;
 	}
 	else if (dirRight && counter >= resetTime)
 	{
@@ -98,7 +98,7 @@ void Snake::UpdateSnake()
 		}
 
 		loc.x += 1;
-		counter = 0;
+		counter = 0.0f;
 	}
 }
 

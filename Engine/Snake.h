@@ -14,15 +14,15 @@ private:
 	bool dirLeft = false;
 	bool dirUp = false;
 	bool dirDown = false;
-	int resetTime = 20;
-	int counter = 0;
+	float resetTime = 0.4f;
+	float counter = 0.0f;
 	bool insidetile = false;
 public:
 	Snake();
 	void DrawHead(Board& brd, Location& loc)const;
 	void DrawBody(Board& brd, Location& bloc)const;
 	void CheckKeyboard(Keyboard& kbd);
-	void UpdateSnake();
+	void UpdateSnake(float dt);
 	bool HitWall();
 	int nSegments = 1;
 	void GrowSnake();
