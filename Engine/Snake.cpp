@@ -11,7 +11,7 @@ void Snake::DrawHead(Board& brd, Location& loc)const
 
 void Snake::DrawBody(Board& brd, Location& bloc)const
 {
-	brd.DrawCell(bloc, Snake::snake_body);
+	brd.DrawCellTwo(bloc, Snake::snake_body);
 }
 
 void Snake::CheckKeyboard(Keyboard & kbd)
