@@ -9,7 +9,7 @@ class Snake
 private:
 	static constexpr Color snake_head = Colors::Yellow;
 	static constexpr Color snake_body = Colors::Green;
-	static constexpr int maxSegments = 50;
+	static constexpr int maxSegments = 100;
 	bool dirRight = false;
 	bool dirLeft = false;
 	bool dirUp = false;
