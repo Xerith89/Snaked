@@ -25,8 +25,8 @@ Game::Game( MainWindow& wnd )
 	:
 	wnd( wnd ),
 	gfx( wnd ),
-	xDist(1, 38),
-	yDist(1, 28),
+	xDist(2, 37),
+	yDist(2, 27),
 	brd(gfx)
 {
 	snake.bloct[0] = { snake.loc.x - 1, snake.loc.y };
@@ -83,6 +83,7 @@ void Game::ComposeFrame()
 		{
 			snake.DrawBody(brd, snake.bloct[i]);
 		}
+		brd.DrawWall(Colors::Blue);
 	}
 }
 

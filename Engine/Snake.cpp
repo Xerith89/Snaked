@@ -104,7 +104,7 @@ void Snake::UpdateSnake(float dt)
 
 bool Snake::HitWall()
 {
-	if (loc.x <= 0 || loc.x >= 80 || loc.y <= 0 || loc.y >= 60)
+	if (loc.x <= 1 || loc.x >= 38 || loc.y <= 1 || loc.y >= 28)
 	{
 		return true;
 	}
