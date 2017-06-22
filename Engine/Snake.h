@@ -9,15 +9,15 @@ class Snake
 private:
 	static constexpr Color snake_head = Colors::Yellow;
 	static constexpr Color snake_body = Colors::Green;
-	static constexpr int maxSegments = 100;
+	static constexpr int maxSegments = 400;
 	bool dirRight = false;
 	bool dirLeft = false;
 	bool dirUp = false;
 	bool dirDown = false;
-	float resetTime = 0.4f;
+	float resetTime = 0.40f;
 	float counter = 0.0f;
-	float speedUpTimer = 0.05f;
-	float MaxSpeed = 0.20f;
+	float speedUpTimer = 0.07f;
+	float MaxSpeed = 0.30f;
 	bool insidetile = false;
 public:
 	Snake();
@@ -29,7 +29,7 @@ public:
 	int nSegments = 1;
 	void GrowSnake();
 	bool insideTile();
-	Location bloct[50];
+	Location bloct[maxSegments];
 	Location loc = { 5,10 };
 	void SpeedUp();
 };

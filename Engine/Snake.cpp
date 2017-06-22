@@ -124,7 +124,7 @@ void Snake::GrowSnake()
 
 bool Snake::insideTile()
 {
-	for (int i = 0; i < nSegments; i++)
+	for (int i = 0; i <= nSegments; i++)
 	{
 		if (loc.x == bloct[i].x && loc.y == bloct[i].y)
 		{

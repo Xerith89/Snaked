@@ -43,13 +43,15 @@ void Game::Go()
 void Game::UpdateModel()
 {
 	const float dt = ft.Mark();
-	if (wnd.kbd.KeyIsPressed(VK_RETURN) && !isGameStarted && !isGameOver)
+	if (wnd.kbd.KeyIsPressed(VK_RETURN) && !isGameStarted )
 	{
 		isGameStarted = true;
+		isGameOver = false;
 	}
 	else if (wnd.kbd.KeyIsPressed(VK_RETURN) && isGameOver)
 	{
 		isGameOver = false;
+		isGameStarted = true;
 	}
 
 	if (!isGameOver && isGameStarted)
@@ -59,6 +61,7 @@ void Game::UpdateModel()
 		SpawnFruit();
 		if (snake.insideTile() || snake.HitWall())
 		{
+			isGameStarted = false;
 			isGameOver = true;
 		}
 	}
@@ -71,7 +74,7 @@ void Game::ComposeFrame()
 		sprite.DrawGameOver(250, 300, gfx);
 	}
 	
-	if (!isGameStarted)
+	if (!isGameStarted && !isGameOver)
 	{
 		sprite.DrawTitle(250, 250, gfx);
 	}
